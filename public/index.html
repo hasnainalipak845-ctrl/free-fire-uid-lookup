@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="Look up publicly available Free Fire player information by UID." />
+  <title>FF Intel — Player Lookup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <nav class="nav">
+    <a class="brand" href="#" aria-label="FF Intel home"><span class="brand-mark">FF</span><span>INTEL<span class="brand-dot">.</span></span></a>
+    <div class="nav-tag"><span class="live-dot"></span> PLAYER DATABASE</div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> FREE FIRE PROFILE SEARCH</div>
+      <h1>KNOW YOUR<br><span>OPPONENT.</span></h1>
+      <p class="hero-copy">Player stats. Rank details. Account history.<br class="desktop-break"> One UID gives you the public profile overview.</p>
+    </section>
+
+    <section class="search-panel">
+      <div class="panel-top"><span class="panel-index">01 / SEARCH</span><span class="panel-caption">PLAYER IDENTIFICATION</span></div>
+      <form id="search-form">
+        <div class="field">
+          <label for="uid">PLAYER UID</label>
+          <input id="uid" name="uid" type="text" inputmode="numeric" autocomplete="off" maxlength="15" placeholder="Enter 5–15 digit UID" required />
+        </div>
+        <div class="field region-field">
+          <label for="region">REGION</label>
+          <select id="region" name="region">
+            <option value="">Auto detect</option>
+            <option value="PK">Pakistan</option>
+            <option value="IND">India</option>
+            <option value="BD">Bangladesh</option>
+            <option value="SG">Singapore</option>
+            <option value="ID">Indonesia</option>
+            <option value="BR">Brazil</option>
+            <option value="US">United States</option>
+          </select>
+        </div>
+        <button id="search-button" type="submit"><span>FIND PLAYER</span><span class="button-arrow">↗</span></button>
+      </form>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+      <div class="privacy-note"><span>◇</span> Public game data only · No password required</div>
+    </section>
+
+    <section id="player-card" class="player-card hidden" aria-live="polite"></section>
+
+    <section class="feature-strip">
+      <div class="feature"><span class="feature-number">A</span><div><strong>ACCOUNT</strong><small>Level, EXP & likes</small></div></div>
+      <div class="feature"><span class="feature-number">B</span><div><strong>RANKS</strong><small>BR & Clash Squad</small></div></div>
+      <div class="feature"><span class="feature-number">C</span><div><strong>GUILD</strong><small>Public guild details</small></div></div>
+    </section>
+
+    <footer><span>FF INTEL<span class="brand-dot">.</span></span><p>Independent fan-made tool. Not affiliated with, endorsed by, or connected to Garena or Free Fire. Data availability depends on the API provider.</p></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
